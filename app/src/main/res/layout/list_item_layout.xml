@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp">
+
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="254dp"
+
+            android:layout_marginRight="254dp"
+
+            android:layout_marginBottom="5dp"
+
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="8sp"
+            android:orientation="vertical"
+            android:textColor="#de000000"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/textbody"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.169"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1"
+            tools:ignore="MissingConstraints"
+            tools:text="Hindi / हिंदी  " />
+
+        <TextView
+            android:id="@+id/textbody"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginStart="5dp"
+
+            android:layout_marginLeft="5dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+
+            android:lineSpacingExtra="7sp"
+            android:orientation="vertical"
+            android:textColor="#8b000000"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@id/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+            tools:ignore="MissingConstraints"
+            tools:text="1. हिंदी लिपि में लिखो
+
+2. English to Hindi : “kaise ho -&gt; कैसे हो ”" />
+
+        <ImageView
+            android:id="@+id/Imgicon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="315dp"
+            android:layout_marginLeft="315dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.884"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/add_circle_outline_24_px"
+            tools:ignore="MissingConstraints" />
+
+        <view
+            android:id="@+id/line"
+            class="android.widget.LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textbody"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
