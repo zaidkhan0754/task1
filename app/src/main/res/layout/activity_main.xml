@@ -8,11 +8,17 @@
     android:weightSum="10"
     tools:context=".MainActivity">
 
+    <include
+        layout="@layout/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1" />
+
     <ScrollView
         android:id="@+id/scrollview1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="7"
+        android:layout_weight="8"
         >
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -125,7 +131,8 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-        <EditText
+
+    <EditText
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
