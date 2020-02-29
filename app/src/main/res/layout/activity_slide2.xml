@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".slide2">
+
+
+    <include
+        layout="@layout/action_bar"
+        android:id="@+id/top_bar1"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_weight="1" />
+
+    <ScrollView
+        android:id="@+id/scrollview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:id="@+id/textView1"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="18dp"
+
+
+                android:layout_marginLeft="8dp"
+
+
+                android:layout_marginRight="242dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif"
+                android:text="Added language"
+                android:textColor="#545454"
+                android:textSize="14sp"
+                android:textStyle="normal"
+
+                app:layout_constraintBottom_toTopOf="@id/selectedlang"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.103"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+
+                android:id="@+id/selectedlang"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="3dp"
+
+                android:layout_marginLeft="8dp"
+
+                android:layout_marginEnd="242dp"
+
+                android:layout_marginRight="242dp"
+
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="8sp"
+                android:text="English (India)"
+                android:textColor="#de000000"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/hing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.114"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/hing"
+                app:layout_constraintTop_toBottomOf="@id/selectedlang"
+               android:layout_marginLeft="10dp"
+                app:layout_constraintBottom_toTopOf="@id/line"
+
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="HingLish"
+                >
+
+
+            </TextView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/delete_icon"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/delete_icon"
+                app:layout_constraintTop_toBottomOf="@id/selectedlang"
+                app:layout_constraintBottom_toTopOf="@id/line"
+
+                />
+
+            <view
+                android:id="@+id/line"
+                class="android.widget.LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+
+                android:background="@color/colorAccent"
+
+                app:layout_constraintTop_toBottomOf="@id/hing"
+                app:layout_constraintBottom_toTopOf="@id/textTitle"
+
+                />
+
+
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="254dp"
+
+                android:layout_marginRight="254dp"
+
+                android:layout_marginBottom="5dp"
+
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="8sp"
+                android:orientation="vertical"
+                android:textColor="#de000000"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/textbody"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.169"
+                app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/line"
+                app:layout_constraintVertical_weight="1"
+                tools:ignore="MissingConstraints"
+            android:text="Hindi / हिंदी  " />
+
+            <TextView
+                android:id="@+id/textbody"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginStart="5dp"
+
+                android:layout_marginLeft="5dp"
+
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif"
+
+                android:lineSpacingExtra="7sp"
+                android:orientation="vertical"
+                android:textColor="#8b000000"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/lineBig"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTitle"
+                tools:ignore="MissingConstraints"
+                android:text="1. हिंदी लिपि में लिखो
+
+2. English to Hindi : “kaise ho -&gt; कैसे हो ”" />
+
+
+            <view
+                android:id="@+id/lineBig"
+                class="android.widget.LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+
+
+                android:background="@color/colorAccent"
+                app:layout_constraintBottom_toTopOf="@id/programlist"
+                app:layout_constraintTop_toBottomOf="@+id/hing"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tvsuggested"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="12dp"
+
+
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="242dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:text="Suggested languages"
+                android:textColor="#545454"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/programlist"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.081"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lineBig" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/programlist"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvsuggested"
+                tools:layout_editor_absoluteX="0dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Try out keyboard "
+        android:layout_weight="1"
+        android:background="@color/colorAccent"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="bottom"
+
+        android:gravity="center|left"
+
+
+        />
+
+
+
+</LinearLayout>

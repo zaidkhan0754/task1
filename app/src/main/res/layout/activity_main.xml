@@ -10,8 +10,9 @@
 
     <include
         layout="@layout/action_bar"
+        android:id="@+id/top_bar1"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="110dp"
         android:layout_weight="1" />
 
     <ScrollView
@@ -60,7 +61,7 @@
 
                 android:layout_marginStart="3dp"
 
-                android:layout_marginLeft="3dp"
+                android:layout_marginLeft="8dp"
 
                 android:layout_marginEnd="242dp"
 
@@ -137,9 +138,11 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Try out keyboard "
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:background="@color/colorAccent"
             android:textColor="#FFFFFF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_gravity="bottom"
 
             android:gravity="center|left"
