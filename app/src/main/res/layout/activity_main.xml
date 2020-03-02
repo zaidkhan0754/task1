@@ -103,9 +103,9 @@
                     android:layout_marginStart="12dp"
 
 
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="242dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="sans-serif"
                     android:gravity="center_horizontal"
                     android:text="Suggested languages"

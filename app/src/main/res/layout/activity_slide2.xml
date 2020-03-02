@@ -36,20 +36,22 @@
                 android:layout_height="18dp"
 
 
-                android:layout_marginLeft="8dp"
+                android:layout_marginStart="12dp"
 
 
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="242dp"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="sans-serif"
                 android:text="Added language"
                 android:textColor="#545454"
+
                 android:textSize="14sp"
                 android:textStyle="normal"
-
                 app:layout_constraintBottom_toTopOf="@id/selectedlang"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.103"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,9 +62,9 @@
 
                 android:layout_height="wrap_content"
 
-                android:layout_marginStart="3dp"
+                android:layout_marginStart="12dp"
 
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="12dp"
 
                 android:layout_marginEnd="242dp"
 
@@ -71,33 +73,33 @@
                 android:layout_marginBottom="8dp"
                 android:fontFamily="sans-serif-medium"
                 android:lineSpacingExtra="8sp"
-                android:text="English (India)"
+                android:text="English (En/Hi)"
                 android:textColor="#de000000"
                 android:textSize="16sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toTopOf="@id/hing"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.114"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
             <TextView
+                android:id="@+id/hing"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/hing"
-                app:layout_constraintTop_toBottomOf="@id/selectedlang"
-               android:layout_marginLeft="10dp"
-                app:layout_constraintBottom_toTopOf="@id/line"
-
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
                 android:text="HingLish"
-                >
+
+                app:layout_constraintBottom_toTopOf="@id/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selectedlang">
 
 
             </TextView>
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:id="@+id/delete_icon"
                 android:layout_marginEnd="10dp"
                 android:padding="10dp"
@@ -124,14 +126,13 @@
                 />
 
 
-
             <TextView
                 android:id="@+id/textTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="254dp"
 
@@ -142,18 +143,19 @@
                 android:fontFamily="sans-serif"
                 android:lineSpacingExtra="8sp"
                 android:orientation="vertical"
-                android:textColor="#de000000"
+                android:text="Hindi / हिंदी  "
 
+                android:textColor="#de000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@id/textbody"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.169"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintTop_toBottomOf="@id/line"
+                app:layout_constraintTop_toBottomOf="@id/line"
                 app:layout_constraintVertical_weight="1"
-                tools:ignore="MissingConstraints"
-            android:text="Hindi / हिंदी  " />
+                tools:ignore="MissingConstraints" />
+
 
             <TextView
                 android:id="@+id/textbody"
@@ -162,9 +164,9 @@
                 android:layout_height="wrap_content"
 
 
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="12dp"
 
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="12dp"
 
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="32dp"
@@ -174,18 +176,63 @@
 
                 android:lineSpacingExtra="7sp"
                 android:orientation="vertical"
+                android:text="1. हिंदी लिपि में लिखो
+
+"
+                android:textColor="#8b000000"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/second_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTitle"
+                tools:ignore="MissingConstraints" />
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toTopOf="@id/second_line"
+                app:layout_constraintTop_toBottomOf="@id/textTitle"
+
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_keyboard_arrow_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteY="137dp"></ImageView>
+
+            <TextView
+                android:id="@+id/second_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+
+                android:layout_marginTop="5dp"
+
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="7sp"
+
+                android:orientation="vertical"
+                android:text="2. English to Hindi : “kaise ho -&gt; कैसे हो ”"
                 android:textColor="#8b000000"
                 android:textSize="13sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toTopOf="@id/lineBig"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.16"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textTitle"
-                tools:ignore="MissingConstraints"
-                android:text="1. हिंदी लिपि में लिखो
+                app:layout_constraintTop_toBottomOf="@id/textbody"
+                tools:ignore="MissingConstraints"></TextView>
 
-2. English to Hindi : “kaise ho -&gt; कैसे हो ”" />
+
+
+
+
 
 
             <view
@@ -211,9 +258,9 @@
                 android:layout_marginStart="12dp"
 
 
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="242dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="sans-serif"
                 android:gravity="center_horizontal"
                 android:text="Suggested languages"
