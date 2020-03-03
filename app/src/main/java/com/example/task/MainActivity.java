@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -34,10 +36,22 @@ init1();
         final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
                 View mview = getLayoutInflater().inflate(R.layout.dialog,null);
 
+
+        Button btn_cancel=(Button)mview.findViewById(R.id.btn_cancel);
+
+
                alert.setView(mview);
 
                 final AlertDialog alertDialog = alert.create();
                 alertDialog.setCanceledOnTouchOutside(true);
+
+                btn_cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        alertDialog.dismiss();
+                    }
+                });
 
                 alertDialog.show();
 
@@ -64,9 +78,9 @@ init1();
         // int dialogWindowHeight = (int) (displayHeight * 0.9f);
 
         // Set alert dialog width equal to screen width 70%
-        int dialogWindowWidth = (int) (displayWidth * 0.9f);
+        int dialogWindowWidth = (int) (displayWidth * 0.85f);
         // Set alert dialog height equal to screen height 70%
-        int dialogWindowHeight = (int) (displayHeight * 0.9f);
+        int dialogWindowHeight = (int) (displayHeight * 0.85f);
 
         // Set the width and height for the layout parameters
         // This will bet the width and height of alert dialog
@@ -85,13 +99,13 @@ init1();
 
     public  void init1(){
         language.add(new RecyclerText("Hindi / हिंदी  ","1. हिंदी लिपि में लिखो  \n2. English to Hindi : \"kaise ho -> कैसे हो \"") );
-        language.add(new RecyclerText("Marathi / मराठी","1.मराठी लिपीमध्ये लिहा \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
-        language.add(new RecyclerText("Gujarati / ગુજરાતી","1. ગુજરાતી સ્ક્રિપ્ટમાં લખો  \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
-        language.add(new RecyclerText("Telugu / తెలుగు","1. తెలుగు లిపిలో వ్రాయండి \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
-        language.add(new RecyclerText("Hindi / हिंदी  ","1. हिंदी लिपि में लिखो  \n2. English to Hindi : \"kaise ho -> कैसे हो \"") );
-        language.add(new RecyclerText("Marathi / मराठी","1.मराठी लिपीमध्ये लिहा \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
-        language.add(new RecyclerText("Gujarati / ગુજરાતી","1. ગુજરાતી સ્ક્રિપ્ટમાં લખો  \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
-        language.add(new RecyclerText("Telugu / తెలుగు","1. తెలుగు లిపిలో వ్రాయండి \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
+        language.add(new RecyclerText(" Marathi / मराठी","1.मराठी लिपीमध्ये लिहा \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
+        language.add(new RecyclerText(" Gujarati / ગુજરાતી","1. ગુજરાતી સ્ક્રિપ્ટમાં લખો  \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
+        language.add(new RecyclerText(" Telugu / తెలుగు","1. తెలుగు లిపిలో వ్రాయండి \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
+        language.add(new RecyclerText(" Hindi / हिंदी  ","1. हिंदी लिपि में लिखो  \n2. English to Hindi : \"kaise ho -> कैसे हो \"") );
+        language.add(new RecyclerText(" Marathi / मराठी","1.मराठी लिपीमध्ये लिहा \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
+        language.add(new RecyclerText(" Gujarati / ગુજરાતી","1. ગુજરાતી સ્ક્રિપ્ટમાં લખો  \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
+        language.add(new RecyclerText(" Telugu / తెలుగు","1. తెలుగు లిపిలో వ్రాయండి \n2. English to Gujarati : “kema cho -> કેમ છો\"") );
         recyclerinit();
     }
 

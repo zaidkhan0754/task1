@@ -35,20 +35,19 @@
                 android:layout_height="18dp"
 
 
-                android:layout_marginLeft="8dp"
-
-
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
                 android:layout_marginRight="242dp"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="sans-serif"
+
                 android:text="Added language"
                 android:textColor="#545454"
                 android:textSize="14sp"
                 android:textStyle="normal"
-
                 app:layout_constraintBottom_toTopOf="@id/selectedlang"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.103"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,14 +58,12 @@
 
                 android:layout_height="wrap_content"
 
-                android:layout_marginStart="3dp"
+                android:layout_marginStart="8dp"
 
                 android:layout_marginLeft="8dp"
 
                 android:layout_marginEnd="242dp"
-
                 android:layout_marginRight="242dp"
-
                 android:layout_marginBottom="8dp"
                 android:fontFamily="sans-serif-medium"
                 android:lineSpacingExtra="8sp"
@@ -76,7 +73,7 @@
                 android:textStyle="normal"
                 app:layout_constraintBottom_toTopOf="@id/lineBig"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.114"
+                app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
@@ -93,31 +90,31 @@
                     app:layout_constraintStart_toStartOf="parent"
                     />
 
-                <TextView
-                    android:id="@+id/tvsuggested"
+            <TextView
+                android:id="@+id/tvsuggested"
 
-                    android:layout_width="wrap_content"
+                android:layout_width="wrap_content"
 
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginStart="12dp"
+                android:layout_height="wrap_content"
 
 
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="242dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center_horizontal"
-                    android:text="Suggested languages"
-                    android:textColor="#545454"
-                    android:textSize="14sp"
-                    android:textStyle="normal"
-                    app:layout_constraintBottom_toTopOf="@id/programlist"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="242dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:text="Suggested languages"
+                android:textColor="#545454"
 
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.081"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/lineBig" />
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/programlist"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lineBig" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/programlist"
@@ -139,7 +136,7 @@
             android:layout_height="50dp"
             android:hint="Try out keyboard "
             android:layout_weight="1"
-            android:background="@color/colorAccent"
+            android:background="@drawable/background_try_keyboard"
             android:textColor="#FFFFFF"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
