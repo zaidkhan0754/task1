@@ -5,34 +5,56 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    ImageView arrow;
+
     private ArrayList<RecyclerText> language=new ArrayList<>();
+    private ArrayList<RecyclerText2> language1=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+       setContentView(R.layout.activity_main);
+       // setContentView(R.layout.dialog);
 
-        RecyclerView programlist = (RecyclerView) findViewById(R.id.programlist);
+
 init1();
+//init2();
 
-
+    }
+    public void onButtonClick(View v)
+    {
+        if (v.getId() == R.id.addlang)
+        {
+            Intent i = new Intent(MainActivity.this,addlanguage.class);
+            startActivity(i);
+        }
 
     }
 
 
-    public void btn_showDialog(View view){
+
+
+
+
+
+
+
+
+/*    public void btn_showDialog(View view){
         final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
                 View mview = getLayoutInflater().inflate(R.layout.dialog,null);
 
@@ -90,11 +112,9 @@ init1();
         // Apply the newly created layout parameters to the alert dialog window
         alertDialog.getWindow().setAttributes(layoutParams);
 
-//        Window window = myDialog.getWindow();
-//       mview.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 
     }
-
+*/
 
 
     public  void init1(){
@@ -109,13 +129,48 @@ init1();
         recyclerinit();
     }
 
+
+
+    public void init2(){
+        language1.add(new RecyclerText2(R.id.space_two,R.drawable.bitmap,"हिंदी (Compact) "));
+        language1.add(new RecyclerText2(R.id.space_one,R.drawable.bitmap,"हिंदी "));
+        language1.add(new RecyclerText2(R.id.space_one,R.drawable.bitmap,"likhana - लिखना"));
+        language1.add(new RecyclerText2(R.id.space_one,R.drawable.bitmap,"Marathi / मराठी"));
+        language1.add(new RecyclerText2(R.id.space_one,R.drawable.bitmap,"Gujarati / ગુજરાતી"));
+        language1.add(new RecyclerText2(R.id.space_one,R.drawable.bitmap,"Telugu / తెలుగు"));
+
+        recyclerinit1();
+    }
+
     public void recyclerinit(){
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this,LinearLayoutManager.VERTICAL,false);
 
         RecyclerView recyclerView=findViewById(R.id.programlist);
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerViewAdapterText adapterText=new RecyclerViewAdapterText(MainActivity.this,language);
         recyclerView.setAdapter(adapterText);
+    }
+
+    public void recyclerinit1(){
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+
+        RecyclerView recyclerView=findViewById(R.id.keylist);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        RecyclerViewAdapterText2 adapterText=new RecyclerViewAdapterText2(MainActivity.this,language1);
+        recyclerView.setAdapter(adapterText);
+
+    }
+    public class RecyclerText2{
+        public int  V1,V2;
+        public String V3;
+
+
+        public RecyclerText2(int V1,int V2,String V3){
+            this.V3=V3;
+            this.V1=V1;
+            this.V2=V2;
+        }
     }
 
 

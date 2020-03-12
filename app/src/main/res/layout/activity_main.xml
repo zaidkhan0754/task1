@@ -28,7 +28,9 @@
 
             <TextView
 
-                android:id="@+id/textView1"
+                android:onClick="onButtonClick"
+
+                android:id="@+id/addlang"
 
                 android:layout_width="wrap_content"
 
@@ -39,8 +41,9 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="242dp"
                 android:layout_marginBottom="16dp"
-                android:fontFamily="sans-serif"
+                android:clickable="true"
 
+                android:fontFamily="sans-serif"
                 android:text="Added language"
                 android:textColor="#545454"
                 android:textSize="14sp"
@@ -75,7 +78,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+                app:layout_constraintTop_toBottomOf="@+id/addlang" />
 
             <view
                     android:id="@+id/lineBig"

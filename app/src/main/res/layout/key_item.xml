@@ -1,80 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".addlanguage">
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/one"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/color_action_bar"
-        android:foregroundGravity="top"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-
-        <TextView
-
-            android:id="@+id/hinditext"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:fontFamily="sans-serif-medium"
-
-            android:gravity="center_horizontal"
-
-            android:text="Hindi / हिंदी  "
-
-            android:textColor="#ffffff"
-            android:textSize="16sp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
-
-        <ImageView
-            android:onClick="onCancel"
-            android:id="@+id/delete"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_delete_black_24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-
-        </ImageView>
-
-        <ImageView
-            android:onClick="onCancel"
-            android:id="@+id/arrow"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/ic_keyboard_backspace_black_24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-
-        </ImageView>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    android:layout_height="match_parent">
 
 
     <TextView
@@ -83,7 +13,6 @@
         android:layout_height="18dp"
         android:layout_marginStart="46dp"
         android:layout_marginLeft="46dp"
-        android:layout_marginTop="16dp"
         android:background="@drawable/background4_style"
         android:gravity="center"
         android:text="Most popular"
@@ -92,7 +21,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/one"
+
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
     </TextView>
@@ -156,6 +86,7 @@
         android:layout_height="21dp"
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
+        android:orientation="horizontal"
         android:background="@drawable/background3_style"
         app:layout_constraintBottom_toTopOf="@id/second_key"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -255,84 +186,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/third_key" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#BDBDBD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-
-            android:id="@+id/textView3"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:layout_marginBottom="16dp"
-
-            android:fontFamily="sans-serif"
-
-            android:text="3 Selected"
-
-            android:textColor="#474747"
-            android:textSize="14sp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.05"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:onClick="onCancel"
-            android:id="@+id/textView2"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:layout_marginBottom="16dp"
-
-            android:fontFamily="sans-serif-medium"
-
-            android:text="CANCEL"
-
-            android:textColor="#ff9800"
-            android:textSize="14sp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.6"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:onClick="onCancel"
-
-            android:layout_width="80dp"
-
-            android:layout_height="30dp"
-
-            android:layout_marginBottom="12dp"
-
-            android:background="@drawable/background5_style"
-
-            android:fontFamily="sans-serif-medium"
-
-            android:gravity="center"
-
-            android:text="DONE"
-            android:textColor="#ffffff"
-            android:textSize="14sp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.91"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

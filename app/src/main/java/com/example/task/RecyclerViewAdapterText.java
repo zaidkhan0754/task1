@@ -1,15 +1,19 @@
 package com.example.task;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -23,13 +27,11 @@ public class RecyclerViewAdapterText extends RecyclerView.Adapter<RecyclerViewAd
         this.mcontext = mcontext;
     }
 
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_layout,parent,false);
-
-
-
 
         return new ViewHolder(v);
     }
@@ -42,23 +44,28 @@ public class RecyclerViewAdapterText extends RecyclerView.Adapter<RecyclerViewAd
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(mcontext, holder.tv1.getText(), Toast.LENGTH_SHORT).show();
+
                 final AlertDialog.Builder alert = new AlertDialog.Builder(mcontext);
                 LayoutInflater inflater = (LayoutInflater) mcontext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-               // View v2 = inflater.inflate(R.layout.dialog ,null);
                 View mview = inflater.inflate(R.layout.dialog,null);
-                Button btn_cancel=(Button)mview.findViewById(R.id.btn_cancel);
                 TextView t1=mview.findViewById(R.id.hinditext);
                 t1.setText(holder.tv1.getText());
+
+
+
 
 
 
                 alert.setView(mview);
                 final AlertDialog alertDialog = alert.create();
                 alertDialog.setCanceledOnTouchOutside(true);
+                alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-               btn_cancel.setOnClickListener(new View.OnClickListener() {
+
+
+                Button btn_cancel=(Button)mview.findViewById(R.id.btn_cancel);
+                btn_cancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
@@ -67,9 +74,8 @@ public class RecyclerViewAdapterText extends RecyclerView.Adapter<RecyclerViewAd
                 });
 
 
-                Button btn_done=(Button)mview.findViewById(R.id.btn_done);
-
-                btn_done.setOnClickListener(new View.OnClickListener() {
+                Button btn_add=(Button)mview.findViewById(R.id.btn_add);
+                btn_add.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
@@ -78,9 +84,12 @@ public class RecyclerViewAdapterText extends RecyclerView.Adapter<RecyclerViewAd
                 });
 
                 alertDialog.show();
+
+
+
+
             }
         });
-
 
     }
 
