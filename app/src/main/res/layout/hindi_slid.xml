@@ -122,6 +122,8 @@
 
     </ImageView>
 
+
+
     <TextView
 
         android:id="@+id/textView5"
@@ -135,9 +137,8 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="8dp"
 
-
-        android:background="@drawable/background_style"
         android:drawableStart="@drawable/selected_copy"
+        android:background="@drawable/background_style"
         android:drawablePadding="-30dp"
         android:gravity="center"
         android:paddingLeft="10dp"

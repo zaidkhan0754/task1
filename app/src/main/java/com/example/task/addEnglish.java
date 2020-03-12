@@ -10,7 +10,7 @@ public class addEnglish extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.hindi_slid);
+        setContentView(R.layout.english_slid);
     }
     public void onCancel(View v)
     {

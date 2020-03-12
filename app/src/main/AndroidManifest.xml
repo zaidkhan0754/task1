@@ -26,6 +26,7 @@
         </activity>
 
         <activity android:name=".addlanguage"></activity>
+        <activity android:name=".addEnglish"></activity>
     </application>
 
 </manifest>

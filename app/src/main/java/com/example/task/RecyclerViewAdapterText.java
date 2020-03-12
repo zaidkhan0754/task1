@@ -22,6 +22,7 @@ public class RecyclerViewAdapterText extends RecyclerView.Adapter<RecyclerViewAd
     private ArrayList<MainActivity.RecyclerText> lang;
     private Context mcontext;
 
+
     public RecyclerViewAdapterText(Context mcontext,ArrayList<MainActivity.RecyclerText> lang) {
         this.lang = lang;
         this.mcontext = mcontext;
@@ -39,6 +40,8 @@ public class RecyclerViewAdapterText extends RecyclerView.Adapter<RecyclerViewAd
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
 
+        final ArrayList<MainActivity.RecyclerText2> language1=new ArrayList<>();
+
         holder.tv1.setText(lang.get(position).t1);
         holder.tv2.setText(lang.get(position).t2);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +53,21 @@ public class RecyclerViewAdapterText extends RecyclerView.Adapter<RecyclerViewAd
 
                 View mview = inflater.inflate(R.layout.dialog,null);
                 TextView t1=mview.findViewById(R.id.hinditext);
+                RecyclerView recyclerView =mview.findViewById(R.id.keylist);
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mcontext,LinearLayoutManager.VERTICAL,false);
+
+                language1.add(new MainActivity.RecyclerText2(R.id.space_two,R.drawable.bitmap,"हिंदी (Compact) "));
+                language1.add(new MainActivity.RecyclerText2(R.id.space_one,R.drawable.bitmap,"हिंदी "));
+                language1.add(new MainActivity.RecyclerText2(R.id.space_one,R.drawable.bitmap,"likhana - लिखना"));
+                language1.add(new MainActivity.RecyclerText2(R.id.space_one,R.drawable.bitmap,"Marathi / मराठी"));
+                language1.add(new MainActivity.RecyclerText2(R.id.space_one,R.drawable.bitmap,"Gujarati / ગુજરાતી"));
+                language1.add(new MainActivity.RecyclerText2(R.id.space_one,R.drawable.bitmap,"Telugu / తెలుగు"));
+                recyclerView.setLayoutManager(linearLayoutManager);
+                RecyclerViewAdapterText2 adapterText=new RecyclerViewAdapterText2(mcontext,language1);
+                recyclerView.setAdapter(adapterText);
                 t1.setText(holder.tv1.getText());
+
+
 
 
 

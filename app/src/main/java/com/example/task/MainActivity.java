@@ -18,21 +18,17 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView arrow;
 
     private ArrayList<RecyclerText> language=new ArrayList<>();
-    private ArrayList<RecyclerText2> language1=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-       setContentView(R.layout.activity_main);
-       // setContentView(R.layout.dialog);
+      setContentView(R.layout.activity_main);
 
 
-init1();
-//init2();
+ init1();
 
     }
     public void onButtonClick(View v)
@@ -43,15 +39,14 @@ init1();
             startActivity(i);
         }
 
+        if (v.getId() ==R.id.selectedlang)
+        {
+            Intent i = new Intent(MainActivity.this,addEnglish.class);
+            startActivity(i);
+        }
+
+
     }
-
-
-
-
-
-
-
-
 
 
 /*    public void btn_showDialog(View view){
@@ -131,16 +126,6 @@ init1();
 
 
 
-    public void init2(){
-        language1.add(new RecyclerText2(R.id.space_two,R.drawable.bitmap,"हिंदी (Compact) "));
-        language1.add(new RecyclerText2(R.id.space_one,R.drawable.bitmap,"हिंदी "));
-        language1.add(new RecyclerText2(R.id.space_one,R.drawable.bitmap,"likhana - लिखना"));
-        language1.add(new RecyclerText2(R.id.space_one,R.drawable.bitmap,"Marathi / मराठी"));
-        language1.add(new RecyclerText2(R.id.space_one,R.drawable.bitmap,"Gujarati / ગુજરાતી"));
-        language1.add(new RecyclerText2(R.id.space_one,R.drawable.bitmap,"Telugu / తెలుగు"));
-
-        recyclerinit1();
-    }
 
     public void recyclerinit(){
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this,LinearLayoutManager.VERTICAL,false);
@@ -151,17 +136,7 @@ init1();
         recyclerView.setAdapter(adapterText);
     }
 
-    public void recyclerinit1(){
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
-
-        RecyclerView recyclerView=findViewById(R.id.keylist);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        RecyclerViewAdapterText2 adapterText=new RecyclerViewAdapterText2(MainActivity.this,language1);
-        recyclerView.setAdapter(adapterText);
-
-    }
-    public class RecyclerText2{
+    static  public class RecyclerText2{
         public int  V1,V2;
         public String V3;
 

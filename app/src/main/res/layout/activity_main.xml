@@ -55,7 +55,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-
+                android:onClick="onButtonClick"
                 android:id="@+id/selectedlang"
                 android:layout_width="wrap_content"
 

@@ -55,4 +55,6 @@ public class RecyclerViewAdapterText2 extends RecyclerView.Adapter<RecyclerViewA
     }
 
 
+
+
 }
