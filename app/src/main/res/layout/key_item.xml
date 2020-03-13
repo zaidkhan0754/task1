@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="190dp"
+    android:layout_height="230dp">
 
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="100dp"
         android:layout_height="18dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/background4_style"
         android:gravity="center"
         android:text="Most popular"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/space_one"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
 
@@ -31,162 +30,219 @@
         android:id="@+id/space_one"
         android:layout_width="156dp"
         android:layout_height="21dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:background="@drawable/background3_style"
 
-        app:layout_constraintBottom_toTopOf="@+id/first_key"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView6" />
 
 
     <ImageView
         android:id="@+id/first_key"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="450dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="60dp"
         android:src="@drawable/bitmap"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space_one">
 
     </ImageView>
 
 
+    <LinearLayout
 
-    <TextView
 
-        android:drawableStart="@drawable/selected_copy"
         android:id="@+id/textView5"
-
         android:layout_width="140dp"
-
         android:layout_height="26dp"
-
-        android:layout_marginStart="24dp"
-
-        android:layout_marginLeft="24dp"
         android:layout_marginTop="8dp"
-
-
         android:background="@drawable/background_style"
-
-        android:drawablePadding="-30dp"
         android:gravity="center"
         android:paddingLeft="10dp"
         android:text="हिंदी"
         android:textColor="#292929"
         android:textSize="14sp"
+        android:weightSum="5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/first_key" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/first_key">
 
-    <TextView
-        android:id="@+id/space_two"
-        android:layout_width="156dp"
-        android:layout_height="21dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:orientation="horizontal"
-        android:background="@drawable/background3_style"
-        app:layout_constraintBottom_toTopOf="@id/second_key"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <CheckBox
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/checkbox_draw"
+            android:button="@android:color/transparent" />
 
 
-    <ImageView
-        android:id="@+id/second_key"
-        android:layout_width="160dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="450dp"
-        android:src="@drawable/bitmap"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/first_key"
-
-        >
-
-    </ImageView>
-
-    <TextView
-
-        android:id="@+id/textView"
-
-        android:layout_width="140dp"
-
-        android:layout_height="26dp"
-
-        android:layout_marginTop="8dp"
-
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-
-        android:background="@drawable/background_style"
-        android:drawableStart="@drawable/selected_copy"
-        android:fontFamily="sans-serif"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:text="likhana - लिखना"
-        android:textColor="#292929"
-        android:textSize="12sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/second_key" />
-
-    <TextView
-        android:id="@+id/space_three"
-        android:layout_width="156dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:background="@drawable/background3_style"
-        app:layout_constraintBottom_toTopOf="@id/third_key"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/eng"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="4.5"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="हिंदी"
+            android:textStyle="normal" />
 
 
-    <ImageView
-        android:id="@+id/third_key"
-        android:layout_width="160dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:src="@drawable/bitmap"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/first_key"
-        app:layout_constraintVertical_bias="0.25">
+    </LinearLayout>
 
-    </ImageView>
+    <!--    <TextView-->
+    <!--        android:id="@+id/space_two"-->
+    <!--        android:layout_width="156dp"-->
+    <!--        android:layout_height="21dp"-->
+    <!--        android:layout_marginEnd="18dp"-->
+    <!--        android:layout_marginRight="18dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:background="@drawable/background3_style"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/second_key"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
-    <TextView
 
-        android:id="@+id/textView4"
+    <!--    <ImageView-->
+    <!--        android:id="@+id/second_key"-->
+    <!--        android:layout_width="160dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:layout_marginRight="16dp"-->
+    <!--        android:layout_marginBottom="450dp"-->
+    <!--        android:src="@drawable/bitmap"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/first_key"-->
 
-        android:layout_width="140dp"
+    <!--        >-->
 
-        android:layout_height="26dp"
+    <!--    </ImageView>-->
 
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/background2_style"
-        android:drawableStart="@drawable/ic_radio_button_unchecked_black_24dp"
-        android:drawablePadding="-5dp"
-        android:gravity="center"
-        android:paddingLeft="5dp"
-        android:text="हिंदी (Compact)"
-        android:textColor="#292929"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/third_key" />
+    <!--    <LinearLayout-->
+
+    <!--        android:id="@+id/textViewz"-->
+    <!--        android:weightSum="5"-->
+
+    <!--        android:layout_width="140dp"-->
+
+    <!--        android:layout_height="26dp"-->
+
+    <!--        android:layout_marginTop="8dp"-->
+
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        android:layout_marginRight="24dp"-->
+
+    <!--        android:background="@drawable/background_style"-->
+    <!--        android:fontFamily="sans-serif"-->
+    <!--        android:gravity="center"-->
+    <!--        android:paddingLeft="10dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/second_key" >-->
+
+
+    <!--        <CheckBox-->
+    <!--            android:layout_width="15dp"-->
+    <!--            android:layout_height="20dp"-->
+    <!--            android:layout_weight="0.5"-->
+    <!--            android:background="@drawable/checkbox_draw"-->
+    <!--            android:button="@android:color/transparent"-->
+
+
+    <!--            ></CheckBox>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView"-->
+    <!--            android:layout_width="60dp"-->
+    <!--            android:layout_height="20dp"-->
+    <!--            android:text="likhana - लिखना"-->
+    <!--            android:gravity="center"-->
+    <!--            android:textStyle="normal"-->
+    <!--            android:layout_weight="4"-->
+    <!--            android:paddingRight="10dp"-->
+    <!--            ></TextView>-->
+
+
+    <!--    </LinearLayout>-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/space_three"-->
+    <!--        android:layout_width="156dp"-->
+    <!--        android:layout_height="21dp"-->
+    <!--        android:layout_marginStart="18dp"-->
+    <!--        android:layout_marginLeft="18dp"-->
+    <!--        android:background="@drawable/background3_style"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/third_key"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/third_key"-->
+    <!--        android:layout_width="160dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginLeft="16dp"-->
+    <!--        android:src="@drawable/bitmap"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/first_key"-->
+    <!--        app:layout_constraintVertical_bias="0.25">-->
+
+    <!--    </ImageView>-->
+
+    <!--    <LinearLayout-->
+
+    <!--        android:id="@+id/textView4"-->
+    <!--        android:weightSum="5"-->
+
+    <!--        android:layout_width="140dp"-->
+
+    <!--        android:layout_height="26dp"-->
+
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginLeft="24dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:background="@drawable/background2_style"-->
+    <!--        android:drawablePadding="-5dp"-->
+    <!--        android:gravity="center"-->
+    <!--        android:paddingLeft="5dp"-->
+    <!--        android:text="हिंदी (Compact)"-->
+    <!--        android:textColor="#292929"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/third_key" >-->
+
+    <!--        <CheckBox-->
+    <!--            android:layout_width="15dp"-->
+    <!--            android:layout_height="20dp"-->
+    <!--            android:layout_weight="0.5"-->
+    <!--            android:background="@drawable/checkbox_draw"-->
+    <!--            android:button="@android:color/transparent"-->
+
+
+    <!--            ></CheckBox>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/eng2"-->
+    <!--            android:layout_width="50dp"-->
+    <!--            android:layout_height="20dp"-->
+    <!--            android:text="हिंदी (Compact)"-->
+    <!--            android:gravity="center"-->
+    <!--            android:textStyle="normal"-->
+    <!--            android:layout_weight="4"-->
+    <!--            android:paddingRight="10dp"-->
+    <!--            ></TextView>-->
+
+
+    <!--    </LinearLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
